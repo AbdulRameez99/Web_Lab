@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TABLE</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Make the Day column bold */
+        td:first-child, th:first-child {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>8:40 - 9:30</th>
+                <th>9:30 - 10:20</th>
+                <th>10:20 - 11:10</th>
+                <th>11:10 - 12:00</th>
+                <th>12:00 - 12:50</th>
+                <th>12:50 - 1:40</th>
+                <th>1:40 - 2:30</th>
+                <th>2:30 - 3:20</th>
+                <th>3:20 - 4:10</th>
+                <th>4:10 - 5:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MONDAY</td>
+                <td colspan="3">CN LAB</td>
+                <td>CD</td>
+                <td>LUNCH BREAK</td>
+                <td>IDS</td>
+                <td>CN</td>
+                <td>DMDW</td>
+                <td>SPORTS</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>TUESDAY</td>
+                <td>CD</td>
+                <td>DMDW</td>
+                <td>CN</td>
+                <td colspan="3">DMDW LAB</td>
+                <td>LUNCH</td>
+                <td>OE</td>
+                <td colspan="2">HONORS / MINORS</td>
+            </tr>
+            <tr>
+                <td>WEDNESDAY</td>
+                <td>DMDW</td>
+                <td>CD</td>
+                <td>TUTORIAL</td>
+                <td>IDS</td>
+                <td>LUNCH BREAK</td>
+                <td>CN</td>
+                <td>LIBRARY</td>
+                <td>OE</td>
+                <td colspan="2" style="text-align: center;">HONORS / MINORS</td>
+            </tr>
+            <tr>
+                <td>THURSDAY</td>
+                <td colspan="2">SS LAB</td>
+                <td>DMDW</td>
+                <td>OE</td>
+                <td>LUNCH BREAK</td>
+                <td>IDS</td>
+                <td>CN</td>
+                <td colspan="3">STEM</td>
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td colspan="3">SC LAB (WT)</td>
+                <td>OE</td>
+                <td>LUNCH BREAK</td>
+                <td>IDS</td>
+                <td>CN</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
