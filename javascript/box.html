@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Box</title>
+    <style>
+        #infoBox {
+            display: none;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #okButton:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="infoBox">
+        <p>This is an information box.</p>
+        <button id="okButton">OK</button>
+    </div>
+    <p id="dummyMessage" style="display: none;">It's a dummy page.</p>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('infoBox').style.display = 'block';
+        };
+
+        document.getElementById('okButton').onclick = function() {
+            document.getElementById('infoBox').style.display = 'none';
+            document.getElementById('dummyMessage').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
