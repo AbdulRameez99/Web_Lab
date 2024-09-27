@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatter</title>
+    <style>
+        #textArea {
+            width: 100%;
+            height: 150px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .button {
+            margin: 5px;
+            padding: 5px 10px;
+        }
+        .active {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="textArea" contenteditable="true"></div><br>
+    <button class="button" id="boldButton" onclick="formatText('bold')">Bold</button>
+    <button class="button" id="italicButton" onclick="formatText('italic')">Italic</button>
+    <button class="button" id="underlineButton" onclick="formatText('underline')">Underline</button>
+
+    <script>
+        function formatText(command) {
+            document.execCommand(command);
+            updateButtonStates();
+        }
+
+        function updateButtonStates() {
+            document.getElementById('boldButton').classList.toggle('active', document.queryCommandState('bold'));
+            document.getElementById('italicButton').classList.toggle('active', document.queryCommandState('italic'));
+            document.getElementById('underlineButton').classList.toggle('active', document.queryCommandState('underline'));
+        }
+
+        document.getElementById('textArea').addEventListener('keyup', updateButtonStates);
+        document.getElementById('textArea').addEventListener('mouseup', updateButtonStates);
+    </script>
+</body>
+</html>
